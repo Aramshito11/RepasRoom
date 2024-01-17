@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/fragmentPrincipal">
+
+    <fragment
+        android:id="@+id/fragmentPrincipal"
+        android:name="com.example.repasroom.UI.FragmentPrincipal"
+        android:label="FragmentPrincipal" >
+        <action
+            android:id="@+id/action_fragmentPrincipal_to_fragmentAdd"
+            app:destination="@id/fragmentAdd" />
+        <action
+            android:id="@+id/action_fragmentPrincipal_to_fragmentDelUpd"
+            app:destination="@id/fragmentDelUpd" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAdd"
+        android:name="com.example.repasroom.UI.FragmentAdd"
+        android:label="FragmentAdd" >
+        <action
+            android:id="@+id/action_fragmentAdd_to_fragmentPrincipal"
+            app:destination="@id/fragmentPrincipal" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDelUpd"
+        android:name="com.example.repasroom.UI.FragmentDelUpd"
+        android:label="FragmentDelUpd" >
+        <action
+            android:id="@+id/action_fragmentDelUpd_to_fragmentPrincipal"
+            app:destination="@id/fragmentPrincipal" />
+    </fragment>
+</navigation>
